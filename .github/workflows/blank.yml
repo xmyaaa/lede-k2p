@@ -83,6 +83,10 @@ jobs:
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
+       cd ..
+          chmod +x $MOD_PART2_SH
+          cd openwrt
+          $GITHUB_WORKSPACE/$MOD_PART2_SH
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
