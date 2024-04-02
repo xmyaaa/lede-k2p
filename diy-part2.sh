@@ -33,10 +33,10 @@ echo '=========Replace passwall source OK!========='
 
 echo '添加Passwall2软件'
 # rm -rf feeds/luci/applications/luci-app-passwall2
-mkdir feeds/luci/applications/luci-app-passwall2
-git clone -b main --single-branch https://github.com/xiaorouji/openwrt-passwall2 passwall2
-mv passwall2/luci-app-passwall2/* feeds/luci/applications/luci-app-passwall2/
-rm -rf passwall2
+#mkdir feeds/luci/applications/luci-app-passwall2
+#git clone -b main --single-branch https://github.com/xiaorouji/openwrt-passwall2 passwall2
+#mv passwall2/luci-app-passwall2/* feeds/luci/applications/luci-app-passwall2/
+# rm -rf passwall2
 echo '=========Replace passwall source OK!========='
 
 echo '修改Passwall检测规则'
@@ -46,10 +46,3 @@ echo '=========ALTER passwall denpendcies check OK!========='
 echo '修改Passwall2检测规则'
 #sed -i 's/socket" "iptables-mod-//g' feeds/luci/applications/luci-app-passwall2/root/usr/share/passwall2/app.sh
 echo '=========ALTER passwall denpendcies check OK!========='
-
-echo '修改默认IP'
-sed -i 's/ipad=${ipaddr:-"192.168.1.1"}/ipad=${ipaddr:-"192.168.10.1"}/g' package/base-files/files/bin/config_generate
-sed -i 's/addr_offset=2/addr_offset=8/g' package/base-files/files/bin/config_generate
-sed -i 's/${ipaddr:-"192.168.$((addr_offset++)).1"}/${ipaddr:-"192.168.$((addr_offset++)).1"}/g' package/base-files/files/bin/config_generate
-cat package/base-files/files/bin/config_generate |grep hostname=
-echo '=========Alert Default IP OK!========='
