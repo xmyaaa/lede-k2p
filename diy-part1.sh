@@ -14,6 +14,9 @@
 #See the License for the specific language governing permissions and
 #limitations under the License.
 
+# Modify default IP
+#sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+
 echo '添加Passwall依赖feeds'
 sed -i '1 i src-git-full passwall https://github.com/xiaorouji/openwrt-passwall-packages;main' feeds.conf.default
 echo '=========Add passwall feeds source OK!========='
