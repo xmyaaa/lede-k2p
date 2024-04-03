@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: mt7981
+name: cmcc_rax300m_mt7981
 
 on:
   repository_dispatch:
@@ -135,7 +135,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y.%m.%d-%H%M")" >> $GITHUB_OUTPUT
+        echo "release_tag=cmcc_rax300m-Hanwckf_Immortalwrt-$(date +"%Y%m%d_%H%M")" >> "$GITHUB_OUTPUT"
         touch release.txt
         [ ${UPLOAD_GOFILE} = true && ${{ steps.gofile.outputs.url }} ] && echo "ðŸ”— [GoFile](${{ steps.gofile.outputs.url }})" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
