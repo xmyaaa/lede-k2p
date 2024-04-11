@@ -15,5 +15,13 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-# echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+# echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
+echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+#
+echo '添加Passwall2软件'
+rm -rf feeds/luci/applications/luci-app-passwall2
+mkdir feeds/luci/applications/luci-app-passwall2
+git clone -b main --single-branch https://github.com/xiaorouji/openwrt-passwall2 passwall2
+mv passwall2/luci-app-passwall2/* feeds/luci/applications/luci-app-passwall2/
+rm -rf passwall2
+echo '=========Replace passwall source OK!========='
