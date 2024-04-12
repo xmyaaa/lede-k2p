@@ -16,7 +16,7 @@
 
 # Add a feed source
 # echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+# echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 # echo 'src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2' >>feeds.conf.default
 #
 echo '添加Passwall2软件'
@@ -26,3 +26,7 @@ echo '添加Passwall2软件'
 # mv passwall2/luci-app-passwall2/* feeds/luci/applications/luci-app-passwall2/
 # rm -rf passwall2
 echo '=========Replace passwall source OK!========='
+#
+echo '添加Passwall依赖feeds'
+sed -i '1 i src-git-full passwall https://github.com/xiaorouji/openwrt-passwall-packages;main' feeds.conf.default
+echo '=========Add passwall feeds source OK!========='
