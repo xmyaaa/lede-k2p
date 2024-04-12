@@ -20,9 +20,9 @@
 echo 'src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2' >>feeds.conf.default
 #
 echo '添加Passwall2软件'
-rm -rf feeds/luci/applications/luci-app-passwall2
-mkdir feeds/luci/applications/luci-app-passwall2
-git clone -b main --single-branch https://github.com/xiaorouji/openwrt-passwall2 passwall2
-mv passwall2/luci-app-passwall2/* feeds/luci/applications/luci-app-passwall2/
-rm -rf passwall2
+# rm -rf feeds/luci/applications/luci-app-passwall2
+# mkdir feeds/luci/applications/luci-app-passwall2
+# git clone -b main --single-branch https://github.com/xiaorouji/openwrt-passwall2 passwall2
+# mv passwall2/luci-app-passwall2/* feeds/luci/applications/luci-app-passwall2/
+# rm -rf passwall2
 echo '=========Replace passwall source OK!========='
