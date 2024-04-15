@@ -24,3 +24,10 @@ sed -i 's/ImmortalWrt/K2P/g' package/base-files/files/bin/config_generate
 #sed -i 's/FtSupport=0/FtSupport=1/g' package/kernel/mt-drivers/mt_wifi/files/mt7615.1.5G.dat
 #echo 'WNMEnable=1' >> package/kernel/mt-drivers/mt_wifi/files/mt7615.1.2G.dat
 #echo 'WNMEnable=1' >> package/kernel/mt-drivers/mt_wifi/files/mt7615.1.5G.dat
+
+echo '替换Passwall软件'
+rm -rf feeds/luci/applications/luci-app-passwall/*
+git clone -b main --single-branch https://github.com/xiaorouji/openwrt-passwall passwall
+mv passwall/luci-app-passwall/* feeds/luci/applications/luci-app-passwall/
+rm -rf passwall
+echo '=========Replace passwall source OK!========='
