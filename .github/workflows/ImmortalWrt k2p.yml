@@ -38,10 +38,10 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    - name: Checkout
+    - name: Checkout 查看
       uses: actions/checkout@main
 
-    - name: Initialization environment
+    - name: Initialization environment 初始化环境
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
@@ -54,7 +54,7 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
 
-    - name: Clone source code
+    - name: Clone source code 克隆源代码
       working-directory: /workdir
       run: |
         df -hT $PWD
