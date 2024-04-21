@@ -72,8 +72,8 @@ jobs:
       run: #cd openwrt && ./scripts/feeds update -a
         sed -i 's/src-git helloworld/src-git helloworld/g' ./feeds.conf.default
         echo "src-git helloworld https://github.com/xmyaaa/helloworld.git" >> "feeds.conf.default"
-        ./scripts/feeds update -a
-        ./scripts/feeds install -a
+        ./scripts/feeds update helloworld
+        ./scripts/feeds install -a -f -p helloworld
         #echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
 
     - name: Install feeds
