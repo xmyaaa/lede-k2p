@@ -39,7 +39,7 @@ echo 'src-git helloworld https://github.com/xmyaaa/helloworld.git' >>feeds.conf.
 #echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages.git' >>feeds.conf.default
 #echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
 #echo "src-git passwall_packages https://github.com/xmyaaa/openwrt-passwall.git;main" >> "feeds.conf.default"
-echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
+#echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
 
 # echo '添加omcproxy软件源'
 #git clone https://github.com/smsmail2022/luci-app-omcproxy package/luci-app-omcproxy
