@@ -40,7 +40,7 @@ echo 'src-git helloworld https://github.com/xmyaaa/helloworld' >>feeds.conf.defa
 #echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
 #echo "src-git passwall_packages https://github.com/xmyaaa/openwrt-passwall.git;main" >> "feeds.conf.default"
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
-echo 'src-git kenzo https://github.com/quic-go/qtls-go1-20.git' >>feeds.conf.default
+echo 'src-git kenzo https://github.com/quic-go/quic-go.git' >>feeds.conf.default
 
 # echo '添加omcproxy软件源'
 #git clone https://github.com/smsmail2022/luci-app-omcproxy package/luci-app-omcproxy
