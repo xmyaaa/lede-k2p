@@ -14,6 +14,12 @@
 # Uncomment a feed source
 #sed -i 's/^\(.*helloworld\)/\1/' feeds.conf.default
 sed -i 's/src-git helloworld/src-git helloworld/g' ./feeds.conf.default
+#
+echo '替换golang到1.22.x'
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+echo '=========Replace golang OK!========='
+#
 
 # Add a feed source
 # echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
