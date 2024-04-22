@@ -17,7 +17,7 @@ sed -i 's/src-git helloworld/src-git helloworld/g' ./feeds.conf.default
 #
 echo '替换golang到1.22.x'
 rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 19.x feeds/packages/lang/golang
 echo '=========Replace golang OK!========='
 #
 
