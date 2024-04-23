@@ -13,11 +13,11 @@
 
 # 取消掉feeds.conf.default文件里面的helloworld的#注释
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default  #使用源码自带ShadowSocksR Plus+出国软件
-sed -i 's/src-git helloworld/src-git helloworld/g' ./feeds.conf.default
+#sed -i 's/src-git helloworld/src-git helloworld/g' ./feeds.conf.default
 #
 echo '替换golang到1.22.x'
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+# rm -rf feeds/packages/lang/golang
+#git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 echo '=========Replace golang OK!========='
 #
 #修改内核版本（下面两行代码前面有#为源码默认最新5.4内核,没#为4.19内核,默认修改X86的，其他机型L大那里target/linux查看，对应修改下面的路径就好）
