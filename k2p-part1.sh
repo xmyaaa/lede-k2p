@@ -13,7 +13,7 @@
 
 # 取消掉feeds.conf.default文件里面的helloworld的#注释
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default  #使用源码自带ShadowSocksR Plus+出国软件
-sed -i 's/src-git helloworld/src-git helloworld/g' ./feeds.conf.default
+#sed -i 's/src-git helloworld/src-git helloworld/g' ./feeds.conf.default
 #
 echo '替换golang到1.22.x'
 rm -rf feeds/packages/lang/golang
