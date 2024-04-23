@@ -12,7 +12,7 @@
 #
 
 # 取消掉feeds.conf.default文件里面的helloworld的#注释
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default  #使用源码自带ShadowSocksR Plus+出国软件
+sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default  #使用源码自带ShadowSocksR Plus+出国软件
 #sed -i 's/src-git helloworld/src-git helloworld/g' ./feeds.conf.default
 #
 echo '替换golang到1.22.x'
@@ -44,7 +44,7 @@ echo '=========Add passwall feeds source OK!========='
 #
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git helloworld https://github.com/xmyaaa/helloworld' >>feeds.conf.default
+echo 'src-git helloworld https://github.com/xmyaaa/helloworld' >>feeds.conf.default
 #echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages.git' >>feeds.conf.default
 #echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
 #echo "src-git passwall_packages https://github.com/xmyaaa/openwrt-passwall.git;main" >> "feeds.conf.default"
