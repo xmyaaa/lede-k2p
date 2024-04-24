@@ -41,7 +41,7 @@ jobs:
     - name: Checkout 查看
       uses: actions/checkout@main
 
-    - name: Initialization environment
+    - name: Initialization environment 初始化环境
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
