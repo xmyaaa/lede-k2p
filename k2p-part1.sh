@@ -16,8 +16,8 @@
 #sed -i 's/src-git helloworld/src-git helloworld/g' ./feeds.conf.default
 #
 echo '替换golang到1.22.x'
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+# rm -rf feeds/packages/lang/golang
+# git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 echo '=========Replace golang OK!========='
 #
 #修改内核版本（下面两行代码前面有#为源码默认最新5.4内核,没#为4.19内核,默认修改X86的，其他机型L大那里target/linux查看，对应修改下面的路径就好）
@@ -39,7 +39,6 @@ echo '=========Replace passwall source OK!========='
 #
 echo '添加Passwall依赖feeds'
 # sed -i '1 i src-git-full passwall https://github.com/xiaorouji/openwrt-passwall-packages;main' feeds.conf.default
-# sed -i '1 i src-git-full passwall https://github.com/xmyaaa/openwrt-passwall;main' feeds.conf.default
 echo '=========Add passwall feeds source OK!========='
 #
 # Add a feed source
