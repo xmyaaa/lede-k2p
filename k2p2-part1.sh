@@ -22,3 +22,8 @@
 #git clone https://github.com/smsmail2022/luci-app-omcproxy package/luci-app-omcproxy
 #git clone -b 18.06 https://github.com/riverscn/luci-app-omcproxy.git package/luci-app-omcproxy
 #git clone https://github.com/riverscn/luci-app-omcproxy.git package/luci-app-omcproxy
+
+echo '替换golang到1.22.x'
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+echo '=========Replace golang OK!========='
