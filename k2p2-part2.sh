@@ -25,8 +25,8 @@ sed -i 's/ImmortalWrt/K2P/g' package/base-files/files/bin/config_generate
 # echo 'WNMEnable=1' >> package/kernel/mt-drivers/mt_wifi/files/mt7615.1.5G.dat
 #
 echo '替换golang到1.22.x'
-# rm -rf feeds/packages/lang/golang
-#git clone -b 22.x --single-branch https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
+git clone -b 22.x --single-branch https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 echo '=========Replace golang OK!========='
 
 echo '替换Passwall软件'
