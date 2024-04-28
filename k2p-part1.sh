@@ -16,7 +16,7 @@
 #sed -i 's/src-git helloworld/src-git helloworld/g' ./feeds.conf.default
 #
 echo '单独添加app-ssr-plus'
-git clone https://github.com/xmyaaa/immortalwrt-luci/tree/master.git package/luci-app-ssr-plus
+git clone https://github.com/xmyaaa/immortalwrt-luci/tree/openwrt-18.06-k5.4.git package/applications/luci-app-ssr-plus
 echo '=========Add app-ssr-plus OK!========='
 
 echo '替换golang到1.22.x'
