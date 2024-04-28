@@ -16,8 +16,8 @@
 #sed -i 's/src-git helloworld/src-git helloworld/g' ./feeds.conf.default
 #
 echo '单独添加app-ssr-plus'
-git clone https://github.com/xmyaaa/immortalwrt-luci.git package/luci-app-ssr-plus
-git clone https://github.com/xmyaaa/packages.git package/net/xray-core
+#git clone https://github.com/xmyaaa/immortalwrt-luci.git package/luci-app-ssr-plus
+#git clone https://github.com/xmyaaa/packages.git package/net/xray-core
 echo '=========Add app-ssr-plus OK!========='
 
 echo '替换golang到1.22.x'
@@ -26,8 +26,8 @@ echo '替换golang到1.22.x'
 echo '=========Replace golang OK!========='
 #
 echo '一键命令(防止插件冲突，删除重复)'
-sed -i '1i src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '2i src-git small https://github.com/kenzok8/small' feeds.conf.default
+#sed -i '1i src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+#sed -i '2i src-git small https://github.com/kenzok8/small' feeds.conf.default
 ./scripts/feeds update -a && rm -rf feeds/luci/applications/luci-app-mosdns
 rm -rf feeds/packages/net/{alist,adguardhome,mosdns,xray*,v2ray*,v2ray*,sing*,smartdns}
 rm -rf feeds/packages/utils/v2dat
