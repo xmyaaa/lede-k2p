@@ -15,6 +15,10 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default  #使用源码自带ShadowSocksR Plus+出国软件
 #sed -i 's/src-git helloworld/src-git helloworld/g' ./feeds.conf.default
 #
+echo '单独添加app-ssr-plus'
+git clone https://github.com/xmyaaa/immortalwrt-luci/tree/openwrt-18.06-k5.4.git package/luci-app-ssr-plus
+echo '=========Add app-ssr-plus OK!========='
+
 echo '替换golang到1.22.x'
 # rm -rf feeds/packages/lang/golang
 # git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
