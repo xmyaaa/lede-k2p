@@ -21,8 +21,8 @@ echo '单独添加app-ssr-plus'
 echo '=========Add app-ssr-plus OK!========='
 
 echo '替换golang到1.22.x'
-# rm -rf feeds/packages/lang/golang
-# git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 echo '=========Replace golang OK!========='
 #
 echo '一键命令(防止插件冲突，删除重复)'
