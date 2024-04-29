@@ -27,15 +27,14 @@ echo '=========Replace golang OK!========='
 #
 echo '一键命令(防止插件冲突，删除重复)'
 #sed -i '1i src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '1i src-git kenzo https://github.com/xmyaaa/packages' feeds.conf.default
+#sed -i '1i src-git kenzo https://github.com/xmyaaa/packages' feeds.conf.default
 #sed -i '2i src-git small https://github.com/kenzok8/small' feeds.conf.default
-./scripts/feeds update -a && rm -rf feeds/luci/applications/luci-app-mosdns
-rm -rf feeds/packages/net/{alist,adguardhome,mosdns,xray*,v2ray*,v2ray*,sing*,smartdns}
-rm -rf feeds/packages/utils/v2dat
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
-./scripts/feeds install -a 
-#make menuconfig
+#./scripts/feeds update -a && rm -rf feeds/luci/applications/luci-app-mosdns
+# rm -rf feeds/packages/net/{alist,adguardhome,mosdns,xray*,v2ray*,v2ray*,sing*,smartdns}
+# rm -rf feeds/packages/utils/v2dat
+# rm -rf feeds/packages/lang/golang
+# git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+#./scripts/feeds install -a 
 echo '=========删除重复 OK!========='
 #
 #修改内核版本（下面两行代码前面有#为源码默认最新5.4内核,没#为4.19内核,默认修改X86的，其他机型L大那里target/linux查看，对应修改下面的路径就好）
@@ -60,6 +59,7 @@ echo '添加Passwall依赖feeds'
 echo '=========Add passwall feeds source OK!========='
 #
 # Add a feed source
+echo 'src-git helloworld https://github.com/msylgj/helloworld >>feeds.conf.default
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages.git' >>feeds.conf.default
 #echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
