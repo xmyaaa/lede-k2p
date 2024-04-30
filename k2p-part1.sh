@@ -55,6 +55,7 @@ echo '=========Add passwall feeds source OK!========='
 #echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages.git' >>feeds.conf.default
 #echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
 #echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
+echo "src-git passwall https://github.com/xmyaaa/packages.git;openwrt-18.06" >> "feeds.conf.default"
 
 # echo '添加omcproxy软件源'
 #git clone https://github.com/smsmail2022/luci-app-omcproxy package/luci-app-omcproxy
