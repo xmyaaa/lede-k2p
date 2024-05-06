@@ -16,11 +16,11 @@
 #sed -i 's/src-git helloworld/src-git helloworld/g' ./feeds.conf.default
 #
 echo '单独添加app-ssr-plus'
-svn checkout https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
-svn checkout https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
+#svn checkout https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
+#svn checkout https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
 
-sed -i 'N;24a\tools-y += ucl upx' tools/Makefile
-sed -i 'N;40a\$(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
+#sed -i 'N;24a\tools-y += ucl upx' tools/Makefile
+#sed -i 'N;40a\$(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
 echo '=========Add app-ssr-plus OK!========='
 
 echo '替换golang到1.22.x'
@@ -54,7 +54,7 @@ echo '添加Passwall依赖feeds'
 echo '=========Add passwall feeds source OK!========='
 #
 # Add a feed source
-echo 'src-git helloworld https://github.com/msylgj/helloworld' >>feeds.conf.default
+#echo 'src-git helloworld https://github.com/msylgj/helloworld' >>feeds.conf.default
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git kenzo https://github.com/immortalwrt/packages.git' >>feeds.conf.default
 #echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
